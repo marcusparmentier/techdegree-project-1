@@ -16,7 +16,7 @@ An app created mainly with PHP focusing on different types of array usage to sto
 
 ## Setup/Installation Requirements
 
-* Github repository from skadjfl;ksdjkj
+* Github repository from https://github.com/marcusparmentier/techdegree-project-1
 
 ## Known Bugs
 
