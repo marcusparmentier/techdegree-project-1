@@ -3,7 +3,7 @@
 
 // PHP - Random Quote Generator
 
-// multidimensional array named quotes
+// multidimensional array named quotes with inner array elements being associative arrays
 
 $quotes[] = [
     'quote' => "Motivation is crap. Motivation comes and goes. When you’re driven, whatever is in front of you will get destroyed.",
@@ -36,14 +36,14 @@ $quotes[] = [
     'year' => '2010',
 ];
 
-var_dump($quotes);
-// Each inner array element should be an associative array
+//var_dump($quotes);
 
+// Created function getRandomQuote that returns a random key from $quotes array
 
-
-// Create the getRandomQuuote function and name it getRandomQuote
-
-
+function getRandomQuote() {
+    global $quotes;
+    return $quotes[rand(0, 5)];
+}
 
 // Create the printQuote funtion and name it printQuote
 
