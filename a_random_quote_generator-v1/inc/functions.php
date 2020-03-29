@@ -45,6 +45,24 @@ function getRandomQuote() {
     return $quotes[rand(0, 5)];
 }
 
-// Create the printQuote funtion and name it printQuote
+// Made printQuote function calling getRandomQuote function and made empty string varible
+// called displayQuote with conditional statements to leave off citation and year if quote does not have them
+
+function printQuote() {
+    $randQuote = getRandomQuote();
+    $displayQuote = '';
+    if (array_key_exists('citation', $randQuote) && (array_key_exists('year', $randQuote))) {
+        $displayQuote = '<p class="quote">' . $randQuote['quote'] . '</p>';
+        $displayQuote .= '<p class="source">' . $randQuote['source'];
+        $displayQuote .= '<span class="citation">' .  $randQuote['citation'] . '</span>';
+        $displayQuote .= '<span class="year">' . $randQuote['year'] . '</span>';
+        $displayQuote .= '</p>';
+    } else {
+        $displayQuote = '<p class="quote">' . $randQuote['quote'] . '</p>';
+        $displayQuote .= '<p class="source">' . $randQuote['source'];
+        $displayQuote .= '</p>';
+    }
+
+}
 
 ?>
