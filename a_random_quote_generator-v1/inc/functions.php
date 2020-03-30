@@ -57,12 +57,18 @@ function printQuote() {
         $displayQuote .= '<span class="citation">' .  $randQuote['citation'] . '</span>';
         $displayQuote .= '<span class="year">' . $randQuote['year'] . '</span>';
         $displayQuote .= '</p>';
+        echo $displayQuote;
     } else {
         $displayQuote = '<p class="quote">' . $randQuote['quote'] . '</p>';
         $displayQuote .= '<p class="source">' . $randQuote['source'];
         $displayQuote .= '</p>';
+        echo $displayQuote;
     }
 
 }
+
+// Found the correct way to call print function was in function page, 
+//then including function.php in quote-box div
+printQuote();
 
 ?>
